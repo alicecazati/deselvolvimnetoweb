@@ -1,0 +1,52 @@
+{
+    "professores": [
+        {
+            "nome": "João",
+            "preco": 50,
+            "materia": "Matemática",
+            "conhecimento": "Especialista em álgebra, cálculo e geometria.",
+            "metodo_ensino": "Aulas interativas com muitos exemplos e resolução de problemas práticos.",
+            "promocao_aulas": "Descontos para grupos de estudo"
+        },
+        {
+            "nome": "Maria",
+            "preco": 60,
+            "materia": "Física",
+            "conhecimento": "Experiência em física clássica e moderna, com ênfase em mecânica e termodinâmica.",
+            "metodo_ensino": "Método baseado em experimentos práticos e resolução de questões desafiadoras.",
+            "promocao_aulas": "Promoções para pacotes de aulas semanais"
+        },
+        {
+            "nome": "Pedro",
+            "preco": 40,
+            "materia": "Química",
+            "conhecimento": "Mestre em química orgânica e inorgânica, com foco em reações químicas.",
+            "metodo_ensino": "Aulas dinâmicas com foco em experimentos e aplicabilidade prática.",
+            "promocao_aulas": "Oferece aula gratuita para novos alunos"
+        },
+        {
+            "nome": "Ana",
+            "preco": 55,
+            "materia": "Inglês",
+            "conhecimento": "Experiência em ensino de inglês para todos os níveis, com foco em conversação.",
+            "metodo_ensino": "Aulas de conversação e compreensão auditiva com tópicos do dia a dia.",
+            "promocao_aulas": "Descontos para pacotes de aulas de longa duração"
+        },
+        {
+            "nome": "Carlos",
+            "preco": 70,
+            "materia": "Programação",
+            "conhecimento": "Especialista em desenvolvimento web, com experiência em várias linguagens de programação.",
+            "metodo_ensino": "Ensino prático com projetos e código real, focado em desenvolvimento de soluções.",
+            "promocao_aulas": "Aulas personalizadas com mentorias individuais"
+        },
+        {
+            "nome": "Fernanda",
+            "preco": 65,
+            "materia": "Design Gráfico",
+            "conhecimento": "Especialista em design de interfaces, com experiência em Adobe Photoshop e Illustrator.",
+            "metodo_ensino": "Aulas focadas em ferramentas e criação de designs para projetos reais.",
+            "promocao_aulas": "Oferece uma aula introdutória gratuita"
+        }
+    ]
+}
