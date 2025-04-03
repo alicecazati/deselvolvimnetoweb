@@ -10,7 +10,8 @@
 <body>
     <div class="container-box">
         <div class="header">
-            <i class="bi bi-person-circle user-icon"></i>
+            <div><a href="Perfil.html"><i class="bi bi-person-circle user-icon"></i></a></div>
+            
             <div class="search-bar">
                 <i class="bi bi-search"></i>
                 <input type="text" id="searchInput" placeholder="Pesquisar por nome ou matéria..." onkeyup="filtrarProfessores()">
@@ -20,7 +21,7 @@
                     <i class="bi bi-cart"></i>
                 </a>
                 
-                <i class="bi bi-file-plus"></i>
+               <a href="CadastroProfessor.html"> <i class="bi bi-file-plus"></i></a>
             </div>
         </div>
 
@@ -33,7 +34,7 @@
     <script>
         let professores = [];
 
-        // Função para filtrar os professores
+        
         function filtrarProfessores() {
             const searchTerm = document.getElementById("searchInput").value.toLowerCase();
             const filteredProfessores = professores.filter(professor => {
@@ -42,10 +43,10 @@
             exibirProfessores(filteredProfessores);
         }
 
-        // Função para exibir os professores filtrados
+        
         function exibirProfessores(professoresParaExibir) {
             const container = document.getElementById("professores-lista");
-            container.innerHTML = ''; // Limpa os professores exibidos
+            container.innerHTML = ''; 
 
             professoresParaExibir.forEach(professor => {
                 const div = document.createElement("div");
@@ -62,13 +63,13 @@
 
         
 
-        // Função que carrega os dados do JSON e exibe os professores
+        
         document.addEventListener("DOMContentLoaded", function() {
-            fetch("servicoes.json")
+            fetch("http://localhost:3001/professores") 
                 .then(response => response.json())
                 .then(data => {
-                    professores = data.professores;
-                    exibirProfessores(professores); // Exibe todos os professores inicialmente
+                    professores = data; 
+                    exibirProfessores(professores);
                 })
                 .catch(error => console.error("Erro ao carregar os dados:", error));
         });

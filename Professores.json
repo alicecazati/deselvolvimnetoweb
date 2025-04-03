@@ -1,0 +1,49 @@
+{
+  "professores": [
+    {
+      "nome": "João",
+      "preco": 50,
+      "materia": "Matemática",
+      "conhecimento": "Especialista em álgebra, cálculo e geometria.",
+      "metodo_ensino": "Aulas interativas com muitos exemplos e resolução de problemas práticos.",
+      "promocao_aulas": "Descontos para grupos de estudo",
+      "id": "cad3"
+    },
+    {
+      "nome": "Maria",
+      "preco": 45,
+      "materia": "Física",
+      "conhecimento": "Doutora em mecânica clássica e termodinâmica.",
+      "metodo_ensino": "Aulas expositivas com experimentos práticos.",
+      "promocao_aulas": "Pacotes mensais com desconto",
+      "id": "8736"
+    },
+    {
+      "nome": "Carlos",
+      "preco": 60,
+      "materia": "Química",
+      "conhecimento": "Especialista em química orgânica e bioquímica.",
+      "metodo_ensino": "Uso de simulações e experimentos laboratoriais virtuais.",
+      "promocao_aulas": "Desconto para alunos indicados",
+      "id": "5e6d"
+    },
+    {
+      "id": "c618",
+      "nome": "alice",
+      "preco": "4",
+      "materia": "t",
+      "conhecimento": "t",
+      "metodo": "t",
+      "promocao": "t"
+    },
+    {
+      "id": "d129",
+      "nome": "alice",
+      "preco": "4",
+      "materia": "teste",
+      "conhecimento": "tes",
+      "metodo": "t",
+      "promocao": "t"
+    }
+  ]
+}

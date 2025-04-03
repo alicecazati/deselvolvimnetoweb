@@ -54,7 +54,7 @@ body {
 }
 
 .login-button button:hover {
-    background-color: #6b63fff1;
+    background-color: #212d3a;
 }
 
 .login-button button a {
@@ -103,7 +103,7 @@ body {
 }
 
 .input-box input:focus-visible {
-    outline: 1px solid #1c14c0;
+    outline: 1px solid #212d3a;
 }
 
 .input-box label,
@@ -140,7 +140,7 @@ body {
 
 .login-button button {
     border: none;
-    background-color: #1c14c0;
+    background-color:#212d3a;
     padding: 0.8rem 2rem;
     border-radius: 5px;
     cursor: pointer;
@@ -203,26 +203,26 @@ body {
     }
 
     .input-box {
-        width: 100%;  /* Tornar as caixas de entrada com 100% de largura */
+        width: 100%;  
     }
 
     .input-box input {
-        margin-bottom: 1.2rem;  /* Adicionar mais espaçamento entre as caixas */
+        margin-bottom: 1.2rem;  
     }
 
-    /* Reorganizando campos específicos para a versão de laptop */
-    .input-box:nth-child(3), /* Email */
-    .input-box:nth-child(4) { /* Senha */
-        width: 100%; /* Garantir que eles ocupem a largura total */
+    
+    .input-box:nth-child(3), 
+    .input-box:nth-child(4) { 
+        width: 100%; 
     }
 }
 
 @media screen and (max-width: 768px) {
     .input-box {
-        width: 100%; /* Garantir que as caixas de entrada ocupem toda a largura em dispositivos menores */
+        width: 100%; 
     }
 
     .input-group {
-        padding: 1rem;  /* Adicionar mais espaçamento interno em telas pequenas */
+        padding: 1rem;  
     }
 }

@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "id": "94fa",
+      "primeiroNome": "ALICE",
+      "sobrenome": "DEBIEN",
+      "email": "achdebien@sga.pucminas.br",
+      "matricula": "1485810",
+      "senha": "123",
+      "genero": "Feminino"
+    },
+    {
+      "id": "e686",
+      "primeiroNome": "Igor",
+      "sobrenome": "vascocelos",
+      "email": "igor12.vasconcelos@gmail.com",
+      "matricula": "1485810",
+      "senha": "123",
+      "genero": "Masculino"
+    },
+    {
+      "id": "32a8",
+      "primeiroNome": "ALICE",
+      "sobrenome": "DEBIEN",
+      "email": "lice.cazati@gmail.com",
+      "matricula": "1485810",
+      "senha": "123",
+      "genero": "Feminino"
+    },
+    {
+      "id": "dfb6",
+      "primeiroNome": "Marina",
+      "sobrenome": "Cazati",
+      "email": "mrizzioli@gmail.com",
+      "matricula": "1485810",
+      "senha": "123",
+      "genero": "Prefiro não dizer"
+    }
+  ]
+}

@@ -8,8 +8,8 @@ body {
     font-family: Arial, sans-serif;
 }
 .Back i {
-    font-size: 40px; /* Aumenta o tamanho da seta */
-    cursor: pointer; /* Opcional: adiciona um cursor de ponteiro quando o usuário passa o mouse sobre a seta */
+    font-size: 40px; 
+    cursor: pointer; 
 }
 
 .container-box {

@@ -7,30 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Cadastro.css">
     <title>Formulário</title>
-    <script>
-        
-        function redirectToLogin(event) {
-            event.preventDefault();  
-            window.location.href = "login.html";  // Redireciona para login.html
-        }
-        function redirectToLogin(event) {
-            event.preventDefault();  
-            window.location.href = "PaginaPrincipal.html";  
-        }
-    </script>
 </head>
 
 <body>
     <div class="container">
-        
         <div class="form">
-            <form action="#">
+            <form id="cadastroForm">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="login-button">
-                       
                         <button><a href="login.html">Entrar</a></button>
                     </div>
                 </div>
@@ -45,14 +32,15 @@
                         <label for="lastname">Sobrenome</label>
                         <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
                     </div>
+
                     <div class="input-box">
-                        <label for="email">E-mail da Puc</label>
+                        <label for="email">E-mail da PUC</label>
                         <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
                     </div>
 
                     <div class="input-box">
-                        <label for="number">Matricula</label>
-                        <input id="number"  name="number" placeholder="xxxx-xxxx" required>
+                        <label for="number">Matrícula</label>
+                        <input id="number" type="text" name="number" placeholder="xxxx-xxxx" required>
                     </div>
 
                     <div class="input-box">
@@ -60,12 +48,10 @@
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
 
-
                     <div class="input-box">
                         <label for="confirmPassword">Confirme sua Senha</label>
                         <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
                     </div>
-
                 </div>
 
                 <div class="gender-inputs">
@@ -75,35 +61,76 @@
 
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input id="female" type="radio" name="gender">
+                            <input id="female" type="radio" name="gender" value="Feminino">
                             <label for="female">Feminino</label>
                         </div>
 
                         <div class="gender-input">
-                            <input id="male" type="radio" name="gender">
+                            <input id="male" type="radio" name="gender" value="Masculino">
                             <label for="male">Masculino</label>
                         </div>
 
                         <div class="gender-input">
-                            <input id="others" type="radio" name="gender">
+                            <input id="others" type="radio" name="gender" value="Outros">
                             <label for="others">Outros</label>
                         </div>
 
                         <div class="gender-input">
-                            <input id="none" type="radio" name="gender">
+                            <input id="none" type="radio" name="gender" value="Prefiro não dizer">
                             <label for="none">Prefiro não dizer</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="continue-button">
-                    <button type="button" onclick="window.location.href='PaginaPrincipal.html';">Continuar</button>
+                    <button type="submit">Continuar</button>
                 </div>
-                
-                
             </form>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("cadastroForm");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const senha = document.getElementById("password").value;
+                const confirmarSenha = document.getElementById("confirmPassword").value;
+
+                if (senha !== confirmarSenha) {
+                    alert("As senhas não coincidem!");
+                    return;
+                }
+
+                const usuario = {
+                    primeiroNome: document.getElementById("firstname").value,
+                    sobrenome: document.getElementById("lastname").value,
+                    email: document.getElementById("email").value,
+                    matricula: document.getElementById("number").value,
+                    senha: senha,
+                    genero: document.querySelector('input[name="gender"]:checked')?.value || "Não informado"
+                };
+
+                fetch("http://localhost:3000/usuarios", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(usuario)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Usuário cadastrado:", data);
+                    alert("Cadastro realizado com sucesso!");
+                    window.location.href = "PaginaPrincipal.html";
+                })
+                .catch(error => {
+                    console.error("Erro ao cadastrar usuário:", error);
+                    alert("Erro ao cadastrar usuário. Tente novamente.");
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

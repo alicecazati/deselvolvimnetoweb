@@ -6,6 +6,7 @@
     <title>Perfil do Professor</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="Descricao.css">
+    
 </head>
 <body>
     
@@ -21,18 +22,18 @@
             </div>
         </div>
 
-        <h2 id="nome"></h2> <!-- Nome do professor -->
-        <p><strong>Matéria:</strong> <span id="materia"></span></p> <!-- Matéria do professor -->
-        <p><strong>Conhecimento:</strong> <span id="conhecimento"></span></p> <!-- Conhecimento do professor -->
-        <p><strong>Método de Ensino:</strong> <span id="metodo"></span></p> <!-- Método de Ensino do professor -->
-        <p><strong>Promoção:</strong> <span id="promocao"></span></p> <!-- Promoção do professor -->
+        <h2 id="nome"></h2> 
+        <p><strong>Matéria:</strong> <span id="materia"></span></p> 
+        <p><strong>Conhecimento:</strong> <span id="conhecimento"></span></p> 
+        <p><strong>Método de Ensino:</strong> <span id="metodo"></span></p> 
+        <p><strong>Promoção:</strong> <span id="promocao"></span></p> 
         
-        <!-- Botão para adicionar aula ao carrinho -->
+       
         <button type="button" id="adicionar" onclick="adicionarAoCarrinho()">Adicionar Aula ao Carrinho</button>
     </div>
 
     <script>
-        // Função para pegar os parâmetros da URL
+       
         function getParams() {
             let params = new URLSearchParams(window.location.search);
             return {
@@ -45,23 +46,23 @@
             };
         }
 
-        // Função para atualizar as informações da página com os dados do URL
+      
         function updatePage() {
             const { nome, preco, materia, conhecimento, metodo, promocao } = getParams();
 
-            // Atualizar os campos da página com os dados
+            
             document.getElementById("nome").textContent = nome;
             document.getElementById("materia").textContent = materia;
             document.getElementById("conhecimento").textContent = conhecimento;
             document.getElementById("metodo").textContent = metodo;
             document.getElementById("promocao").textContent = promocao;
 
-            // Alterar o comportamento do botão de acordo com os dados
+            
             const button = document.getElementById("adicionar");
             button.setAttribute("onclick", `adicionarAoCarrinho('${nome}', ${preco})`);
         }
 
-        // Função para adicionar a aula ao carrinho
+        
         function adicionarAoCarrinho(nome, preco) {
             let aula = { nome: nome, preco: preco };
             let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -70,7 +71,7 @@
             alert('Aula adicionada ao carrinho!');
         }
 
-        // Atualiza a página assim que ela for carregada
+        
         window.onload = updatePage;
     </script>
     

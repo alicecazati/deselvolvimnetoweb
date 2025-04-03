@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Pagamento</title>
+    <link rel="stylesheet" href="MetodoPagamento.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Escaneie o QR Code</h2>
+        <img src="qrcode.png" alt="QR Code de Pagamento" class="qrcode">
+        <button onclick="confirmarPagamento()">OK</button>
+    </div>
+
+    <script>
+        function confirmarPagamento() {
+            alert("Pagamento confirmado,numero do professor foi enviado para o seu email junto com o comprovante!");
+        }
+    </script>
+
+</body>
+</html>

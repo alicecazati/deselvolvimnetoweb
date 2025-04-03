@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1c3b57, #2c3e50);
+}
+
+
+.container-box {
+    width: 320px; 
+    background: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.Back {
+    position: absolute;
+    margin-right: 1000px;
+}
+
+
+
+
+.input-box {
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+
+.input-box label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #bbb;
+    font-size: 0.85rem;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    padding: 0.6rem;
+    border: none;
+    background-color: #2c3e50;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #6b63fff1;
+}
+
+
+@media screen and (max-width: 480px) {
+    .container-box {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .input-box input,
+    .input-box textarea {
+        font-size: 0.8rem;
+    }
+}

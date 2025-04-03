@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Venda de Serviços</title>
+        <link rel="stylesheet" href="perfil.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    </head>
+    
+    
+<body>
+    <div class="container-box">
+        <div class="back-button">
+            <a href="PaginaPrincipal.html"><i class="bi bi-arrow-90deg-left"></i>
+            </a>
+        </div>
+       
+        <h2>Perfil do Usuário</h2>
+        <div id="perfil">
+            <p><strong>Nome:</strong> <span id="nome"></span></p>
+            <p><strong>Sobrenome:</strong> <span id="sobrenome"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Matrícula:</strong> <span id="matricula"></span></p>
+            <p><strong>Gênero:</strong> <span id="genero"></span></p>
+        </div>
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("http://localhost:3000/usuarios/94fa") // Altere para o ID correto do usuário logado
+                .then(response => response.json())
+                .then(usuario => {
+                    document.getElementById("nome").innerText = usuario.primeiroNome;
+                    document.getElementById("sobrenome").innerText = usuario.sobrenome;
+                    document.getElementById("email").innerText = usuario.email;
+                    document.getElementById("matricula").innerText = usuario.matricula;
+                    document.getElementById("genero").innerText = usuario.genero;
+                })
+                .catch(error => console.error("Erro ao carregar perfil:", error));
+        });
+
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
